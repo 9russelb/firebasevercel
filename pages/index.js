@@ -1,19 +1,21 @@
-import firebase from '../firebase'
+import Button from "./../components/ui/button";
+import GoogleProvider from "../components/auth/provider/google";
+import AppleProvider from "../components/auth/provider/apple";
+import FacebookProvider from "../components/auth/provider/facebook";
+import GithubProvider from "../components/auth/provider/github";
 
-import NavBar from '../components/navbar'
-import Brand from './../components/branding'
+function Home() {
 
-export default function Home() {
-  console.log(firebase)
-   
-  return (
-     <div>
-       <NavBar/>
-       <Brand title="Home Page" tagline="directory app start"/>
+    return (
+        <div>
+            <GoogleProvider/>
+            <AppleProvider/>
+            <FacebookProvider/>
+            <GithubProvider/>
+            {/* <Button bgcolor="tomato" color="white">sign up with firebase</Button> */}
 
-     </div>
-     
-       
-    
-  )
+        </div>
+    );
 }
+
+export default Home
