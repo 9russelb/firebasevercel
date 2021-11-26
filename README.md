@@ -1,4 +1,11 @@
+## SVGR: svg ---> react component
+## SVGO: optimizer for svg - strips needless tags
+
+https://react-icons.github.io/react-icons/
+https://react-svgr.com/docs/getting-started
+
 # Firebase Integration
+https://www.robinwieruch.de/
 
 ## You will need to create a new repo for this class  
 ## call it something like firebase-vercel
