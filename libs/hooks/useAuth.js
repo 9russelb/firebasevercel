@@ -6,15 +6,20 @@ import {auth} from 'libs/firebase'
 function useAuth() {
     const [user, setUser] = useState(null)
 
+    //  useEffect is similar to when a component mounts
     useEffect(()=>{
-        onAuthStateChanged(auth, (clientCredential)=>{
+        const authChange = onAuthStateChanged(auth, (clientCredential)=>{
             if(clientCredential){
                 setUser(clientCredential)
             }else{
                 setUser(null)
             }
         })
-    })
+
+        //  Similar to when a component unmounts
+        return () => authChange()
+
+    }, [])
 
     return user
 
